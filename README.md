@@ -1,3 +1,3 @@
 # Contenna
 
-Trying to implement a coustom Serail communication channel for testing receving and sending data to microcontrollers
+Trying to implement a costom Serail communication channel for receving and sending data to microcontrollers
