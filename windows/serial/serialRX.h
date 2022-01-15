@@ -10,10 +10,12 @@ HANDLE ReciveData(HANDLE handle){
 	else{
 		while(1){ 
 			ReadFile(handle, &TempChar, sizeof(TempChar), &NoBytesRecieved, NULL);
-			if(!NoBytesRecieved)
-			printf("\n__%c__\n",TempChar);
+			if(NoBytesRecieved){
+				printf("%c",TempChar);
+			}
 		}
-		
+			
 	}
-
+		
 }
+

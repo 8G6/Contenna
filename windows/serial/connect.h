@@ -13,7 +13,7 @@ int SerialConfig(char port[]){
 		                        NULL                         //  Null for Comm Devices
 							   );                        
 
-			handle=DCBConfig(handle,9600,8,1,0);
+			handle=DCBConfig(handle);
 
 			TimeoutConfig(handle);
 

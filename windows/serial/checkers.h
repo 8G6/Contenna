@@ -8,7 +8,7 @@ void MaskState(HANDLE handle){
 
 void EscapeState(HANDLE handle){
 	if (EscapeCommFunction(handle, SETDTR) == TRUE)
-		printf("\n\n    DE of MAX485 is Low (Receive Mode)");
+		printf("\n\n   TX = Low (Receive Mode)");
 	else
 		printf("\n\n   Error! in EscapeCommFunction(handle, SETDTR)");
 }

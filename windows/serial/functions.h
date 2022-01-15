@@ -1,13 +1,13 @@
 
-HANDLE DCBConfig(HANDLE handle,int BaudRate,int ByteSize,int StopBits,int Parity){
+HANDLE DCBConfig(HANDLE handle){
 
     DCB DCBPara = { 0 };                 // Initializing DCB structure
 	DCBPara.DCBlength = sizeof(DCBPara);
-	DCBPara.BaudRate = BaudRate;        // Setting BaudRate = 9600
-	DCBPara.ByteSize = ByteSize;        // Setting ByteSize = 8
-	DCBPara.StopBits = StopBits;        // Setting StopBits = 1
-	DCBPara.Parity   = Parity;          // Setting Parity = None 
-
+	DCBPara.BaudRate = CBR_9600;        // Setting BaudRate = 9600
+	DCBPara.ByteSize = 8;        // Setting ByteSize = 8
+	DCBPara.StopBits = ONESTOPBIT;        // Setting StopBits = 1
+	DCBPara.Parity   = NOPARITY;          // Setting Parity = None 
+	
 	if(GetCommState(handle, &DCBPara) == FALSE)
 		printf("\n    Error! in GetCommState()");
 		
